@@ -90,150 +90,17 @@
                             <!-- Inizio container delle chat -->
                             <div class="chat_box">
                                 <!-- Inizio riga contenente una chat -->
-                                <div class="row align-items-center chat_row_active">
+                                <div class="row align-items-center " :class="i === 0 ? 'chat_row_active' : 'chat_row'"  v-for="(contact, i) in contacts">
                                     <div class="col-3">
                                         <!-- Inizio container immagine di profilo -->
                                         <div class="image_container">
-                                            <img src="img/avatar_2.jpg" alt="">
+                                            <img :src="contact.avatar" alt="">
                                         </div>
                                         <!-- Fine container immagine di profilo -->
                                     </div>
                                     <div class="col">
                                         <!-- Inizio testi relativi all'ultimo messaggio -->
-                                        <h3>Michele</h3>
-                                        <p>Ultimo messaggio inviato...</p>
-                                        <p class="last_mess_time">03/11/2021 12:33:03</p>
-                                        <!-- Fine testi relativi all'ultimo messaggio -->
-                                    </div>
-                                </div>
-                                <!-- Fine riga contenente una chat -->
-
-                                <!-- Inizio riga contenente una chat -->
-                                <div class="row align-items-center chat_row">
-                                    <div class="col-3">
-                                        <!-- Inizio container immagine di profilo -->
-                                        <div class="image_container">
-                                            <img src="img/avatar_2.jpg" alt="">
-                                        </div>
-                                        <!-- Fine container immagine di profilo -->
-                                    </div>
-                                    <div class="col">
-                                        <!-- Inizio testi relativi all'ultimo messaggio -->
-                                        <h3>Michele</h3>
-                                        <p>Ultimo messaggio inviato...</p>
-                                        <p class="last_mess_time">03/11/2021 12:33:03</p>
-                                        <!-- Fine testi relativi all'ultimo messaggio -->
-                                    </div>
-                                </div>
-                                <!-- Fine riga contenente una chat -->
-
-                                <!-- Inizio riga contenente una chat -->
-                                <div class="row align-items-center chat_row_active">
-                                    <div class="col-3">
-                                        <!-- Inizio container immagine di profilo -->
-                                        <div class="image_container">
-                                            <img src="img/avatar_2.jpg" alt="">
-                                        </div>
-                                        <!-- Fine container immagine di profilo -->
-                                    </div>
-                                    <div class="col">
-                                        <!-- Inizio testi relativi all'ultimo messaggio -->
-                                        <h3>Michele</h3>
-                                        <p>Ultimo messaggio inviato...</p>
-                                        <p class="last_mess_time">03/11/2021 12:33:03</p>
-                                        <!-- Fine testi relativi all'ultimo messaggio -->
-                                    </div>
-                                </div>
-                                <!-- Fine riga contenente una chat -->
-
-                                <!-- Inizio riga contenente una chat -->
-                                <div class="row align-items-center chat_row">
-                                    <div class="col-3">
-                                        <!-- Inizio container immagine di profilo -->
-                                        <div class="image_container">
-                                            <img src="img/avatar_2.jpg" alt="">
-                                        </div>
-                                        <!-- Fine container immagine di profilo -->
-                                    </div>
-                                    <div class="col">
-                                        <!-- Inizio testi relativi all'ultimo messaggio -->
-                                        <h3>Michele</h3>
-                                        <p>Ultimo messaggio inviato...</p>
-                                        <p class="last_mess_time">03/11/2021 12:33:03</p>
-                                        <!-- Fine testi relativi all'ultimo messaggio -->
-                                    </div>
-                                </div>
-                                <!-- Fine riga contenente una chat -->
-
-                                <!-- Inizio riga contenente una chat -->
-                                <div class="row align-items-center chat_row_active">
-                                    <div class="col-3">
-                                        <!-- Inizio container immagine di profilo -->
-                                        <div class="image_container">
-                                            <img src="img/avatar_2.jpg" alt="">
-                                        </div>
-                                        <!-- Fine container immagine di profilo -->
-                                    </div>
-                                    <div class="col">
-                                        <!-- Inizio testi relativi all'ultimo messaggio -->
-                                        <h3>Michele</h3>
-                                        <p>Ultimo messaggio inviato...</p>
-                                        <p class="last_mess_time">03/11/2021 12:33:03</p>
-                                        <!-- Fine testi relativi all'ultimo messaggio -->
-                                    </div>
-                                </div>
-                                <!-- Fine riga contenente una chat -->
-
-                                <!-- Inizio riga contenente una chat -->
-                                <div class="row align-items-center chat_row">
-                                    <div class="col-3">
-                                        <!-- Inizio container immagine di profilo -->
-                                        <div class="image_container">
-                                            <img src="img/avatar_2.jpg" alt="">
-                                        </div>
-                                        <!-- Fine container immagine di profilo -->
-                                    </div>
-                                    <div class="col">
-                                        <!-- Inizio testi relativi all'ultimo messaggio -->
-                                        <h3>Michele</h3>
-                                        <p>Ultimo messaggio inviato...</p>
-                                        <p class="last_mess_time">03/11/2021 12:33:03</p>
-                                        <!-- Fine testi relativi all'ultimo messaggio -->
-                                    </div>
-                                </div>
-                                <!-- Fine riga contenente una chat -->
-
-                                <!-- Inizio riga contenente una chat -->
-                                <div class="row align-items-center chat_row_active">
-                                    <div class="col-3">
-                                        <!-- Inizio container immagine di profilo -->
-                                        <div class="image_container">
-                                            <img src="img/avatar_2.jpg" alt="">
-                                        </div>
-                                        <!-- Fine container immagine di profilo -->
-                                    </div>
-                                    <div class="col">
-                                        <!-- Inizio testi relativi all'ultimo messaggio -->
-                                        <h3>Michele</h3>
-                                        <p>Ultimo messaggio inviato...</p>
-                                        <p class="last_mess_time">03/11/2021 12:33:03</p>
-                                        <!-- Fine testi relativi all'ultimo messaggio -->
-                                    </div>
-                                </div>
-                                <!-- Fine riga contenente una chat -->
-
-                                <!-- Inizio riga contenente una chat -->
-                                <div class="row align-items-center chat_row">
-                                    <div class="col-3">
-                                        <!-- Inizio container immagine di profilo -->
-                                        <div class="image_container">
-                                            <img src="img/avatar_2.jpg" alt="">
-                                        </div>
-                                        <!-- Fine container immagine di profilo -->
-                                    </div>
-                                    <div class="col">
-                                        <!-- Inizio testi relativi all'ultimo messaggio -->
-                                        <h3>Michele</h3>
+                                        <h3>{{ contact.name }}</h3>
                                         <p>Ultimo messaggio inviato...</p>
                                         <p class="last_mess_time">03/11/2021 12:33:03</p>
                                         <!-- Fine testi relativi all'ultimo messaggio -->
