@@ -184,14 +184,40 @@ p {
 
 .received_message {
     background-color: white;
-    padding: 6px;
+    padding: 10px;
+    position: relative;
+    border-radius: 6px;
+    margin: 10px 0;
+    margin-left: 40px;
+    display: inline-block;
+    min-width: 160px;
+    padding-bottom: 20px;
 }
 
 .sent_message {
     background-color: #d4f9ba;
-    padding: 6px;
+    padding: 16px;
+    position: relative;
+    border-radius: 6px;
+    margin: 10px 0;
+    margin-right: 40px;
+    display: inline-block;
+    min-width: 160px;
+    padding-bottom: 20px;
 }
 
-.mess_time {
-    
+.sent_message .mess_time,
+.received_message .mess_time {
+    position: absolute;
+    bottom: 4px;
+    right: 6px;
+    font-size: 10px;
+    color: gray;
+}
+
+.sent_message p,
+.received_message p {
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
 }
