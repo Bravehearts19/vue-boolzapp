@@ -9,62 +9,189 @@
     height: 100vh;
 }
 
+.fa-bell-slash {
+    color: #8edafc;
+    font-size: 50px;
+}
+
 .central_container {
     position: absolute;
     top: 30px;
     bottom: 30px;
     left: 8%;
     right: 8%;
-    background-color: brown;
     padding: 0;
     display: flex;
+    background-color: #fafafa;
 }
 
 .left_side_container {
     height: 100%;
-    background-color: cadetblue;
     display: flex;
     flex-direction: column;
     width: 330px;
     flex-shrink: 0;
+    flex-grow: 0;
 }
 
 .messages_side_container {
     height: 100%;
-    background-color: chartreuse;
     display: flex;
     flex-direction: column;
     width: calc(100% - 330px);
 }
 
-.user_profile_informations {
+.user_profile_informations,
+.notification_box,
+.chat_options_container,
+.contact_profile_informations {
     flex-shrink: 0;
-    flex-basis: 100px;
+    flex-basis: 75px;
+    flex-grow: 0;
+    margin: 0;
 }
 
-.notification_box {
-    flex-shrink: 0;
-    flex-basis: 100px;
+.contact_profile_informations {
+    border-left: 1px solid #b2b0b1;
+    margin: 0;
 }
 
 .search_chat_box {
     flex-shrink: 0;
-    flex-basis: 80px;
+    flex-basis: 60px;
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.chat_box {
-    flex-grow: 1;
-    overflow-y: auto;
-    overflow-x: hidden;
+.search_chat_box input {
+    width: 94%;
+    height: 36px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
 }
 
+.chat_box,
 .messages_container {
     flex-grow: 1;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
+.messages_container {
+    background-image: url('../img/mine.jpg');
+}
+
+.user_profile_informations,
+.contact_profile_informations {
+    background-color: #eaeaea;
+}
+
 .chat_options_container {
-    flex-shrink: 0;
-    flex-basis: 100px;
+    background-color: #f3eeea;
+}
+
+.chat_box {
+    background-color: white;
+    margin-right: 20px;
+}
+
+.notification_box {
+    background-color: #8edafc;
+    display: flex;
+    align-items: center;
+}
+
+.notification_box button {
+    background-color: white;
+    border-radius: 50%;
+    border: 0;
+    object-fit: contain;
+}
+
+.image_container {
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+}
+
+.image_container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    font-size: 0.95rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+p {
+    font-size: 0.75rem;
+    margin: 0;
+    padding: 0;
+    color: gray;
+}
+
+.chat_row,
+.chat_row_active {
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    height: 80px;
+    position: relative;
+}
+
+.chat_row_active {
+    background-color: #e9ebea;
+}
+
+.last_mess_time {
+    position: absolute;
+    top: 8px;
+    right: 18px;
+}
+
+.user_profile_informations button,
+.contact_profile_informations button,
+.chat_options_container button {
+    color: #b1b1b1;
+    border: 0;
+    object-fit: contain;
+    background-color: transparent;
+    font-size: 20px;
+    margin: 0;
+}
+
+.chat_options_container button {
+    font-size: 30px;
+}
+
+.chat_options_container input {
+    width: 100%;
+    height: 55px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+.received_message {
+    background-color: white;
+    padding: 6px;
+}
+
+.sent_message {
+    background-color: #d4f9ba;
+    padding: 6px;
+}
+
+.mess_time {
+    
 }
