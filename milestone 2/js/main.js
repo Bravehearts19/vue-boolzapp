@@ -90,10 +90,17 @@ window.addEventListener("DOMContentLoaded", function () {
                     }
                 ],
             },
-        ]
+        ],
+        activeContact: {},
     },
     methods: {
-
+        onChatClick(chatDaAttivare) {
+            this.activeContact = chatDaAttivare;
+        },
+        onOpenPage() {
+            this.activeContact = this.contacts[0];
+            return this.activeContact;
+        },
     },
     /* mounted() {
      setInterval(() => {

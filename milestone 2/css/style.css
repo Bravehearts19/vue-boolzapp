@@ -11,7 +11,7 @@
 
 .fa-bell-slash {
     color: #8edafc;
-    font-size: 50px;
+    font-size: 28px;
 }
 
 .central_container {
@@ -73,9 +73,12 @@
 
 .search_chat_box input {
     width: 94%;
-    height: 36px;
+    height: 42px;
     border: 1px solid lightgray;
     border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
 }
 
 .chat_box,
@@ -101,6 +104,7 @@
 .chat_box {
     background-color: white;
     margin-right: 20px;
+    border-right: 1px solid lightgray;
 }
 
 .notification_box {
@@ -114,6 +118,8 @@
     border-radius: 50%;
     border: 0;
     object-fit: contain;
+    height: 50px;
+    width: 50px;
 }
 
 .image_container {
@@ -129,9 +135,10 @@
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0;
     padding: 0;
+    font-weight: 600;
 }
 
 h4 {
@@ -151,13 +158,18 @@ p {
 .chat_row,
 .chat_row_active {
     background-color: white;
-    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
     height: 80px;
     position: relative;
+    cursor: pointer;
 }
 
 .chat_row_active {
     background-color: #e9ebea;
+}
+
+:hover.chat_row {
+    background-color: #f8f8f8;
 }
 
 .last_mess_time {
@@ -168,13 +180,19 @@ p {
 
 .user_profile_informations button,
 .contact_profile_informations button,
-.chat_options_container button {
+.chat_options_container button,
+.dropdown button {
     color: #b1b1b1;
     border: 0;
     object-fit: contain;
     background-color: transparent;
     font-size: 20px;
     margin: 0;
+}
+
+.dropdown button {
+    color: gray;
+    font-size: 14px;
 }
 
 .user_profile_informations {
@@ -198,7 +216,8 @@ p {
 
 .received_message {
     background-color: white;
-    padding: 10px;
+    padding: 16px;
+    padding-right: 30px;
     position: relative;
     border-radius: 6px;
     margin: 10px 0;
@@ -211,6 +230,7 @@ p {
 .sent_message {
     background-color: #d4f9ba;
     padding: 16px;
+    padding-right: 30px;
     position: relative;
     border-radius: 6px;
     margin: 10px 0;
@@ -240,6 +260,22 @@ p {
     border-bottom-right-radius: 6px;
 }
 
-.notification_box button {
-    
+.notification_box a {
+    color: #4e7585;
+}
+
+.dropdown {
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    opacity: 0;
+}
+
+:hover.sent_message .dropdown,
+:hover.received_message .dropdown {
+    opacity: 1;
+}
+
+.border-top-right-radius-6-px {
+    border-top-right-radius: 6px;
 }
