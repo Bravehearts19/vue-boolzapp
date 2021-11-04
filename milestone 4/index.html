@@ -84,14 +84,14 @@
 
                             <!-- Inizio ricerca delle chat -->
                             <div class="search_chat_box py-2">
-                                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchText">
+                                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchText" @keyup="getFilteredContacts()">
                             </div>
                             <!-- Fine ricerca delle chat -->
 
                             <!-- Inizio container delle chat -->
                             <div class="chat_box">
                                 <!-- Inizio riga contenente una chat -->
-                                <div class="d-flex align-items-center " :class="contact === activeContact ? 'chat_row_active' : 'chat_row'" v-for="(contact, i) in getFilteredContacts()" @click="onChatClick(contact)">
+                                <div class="d-flex align-items-center " :class="contact === activeContact ? 'chat_row_active' : 'chat_row'" v-for="(contact, i) in filteredContacts" @click="onChatClick(contact)">
                                     <div class="px-1">
                                         <!-- Inizio container immagine di profilo -->
                                         <div class="image_container px-1 py-1">
