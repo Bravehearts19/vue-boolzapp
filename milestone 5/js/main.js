@@ -129,10 +129,10 @@ window.addEventListener("DOMContentLoaded", function () {
             return this.filteredContacts;
         }
     },
-    befoteMount() {
+    created() {
         this.activeContact = this.contacts[0];
         this.activeContact.index = 0;
-        getFilteredContacts();
+        getFilteredContacts()
     },
     /* mounted() {
      setInterval(() => {

@@ -94,7 +94,7 @@
                             <!-- Inizio container delle chat -->
                             <div class="chat_box">
                                 <!-- Inizio riga contenente una chat -->
-                                <div class="d-flex align-items-center " :class="i === activeContact.index ? 'chat_row_active' : 'chat_row'" v-for="(contact, i) in filteredContacts" @click="onChatClick(contact, i)">
+                                <div class="d-flex align-items-center " :class="i === activeContact.index ? 'chat_row_active' : 'chat_row'" v-for="(contact, i) in getFilteredContacts()" @click="onChatClick(contact, i)">
                                     <div class="px-1">
                                         <!-- Inizio container immagine di profilo -->
                                         <div class="image_container px-1 py-1">

@@ -207,17 +207,9 @@ window.addEventListener("DOMContentLoaded", function () {
         },
         getFilteredContacts() {
             this.filteredContacts = this.contacts.filter((contact) => {
-                console.log(contact, this.searchText);
-                let mustReturn = true;
-
-                if ( contact.name.toLowerCase().includes(this.searchText.toLowerCase()) ) {
-                    mustReturn = true;
-                } else {
-                    mustReturn = false;
-                }
-
-                return mustReturn;
+                return contact.name.toLowerCase().includes(this.searchText.toLowerCase().trim())
             });
+            return this.filteredContacts;
         }
     },
     /* created() {
