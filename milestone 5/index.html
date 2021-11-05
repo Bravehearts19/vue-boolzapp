@@ -105,8 +105,8 @@
                                     <div class="flex-grow-1">
                                         <!-- Inizio testi relativi all'ultimo messaggio -->
                                         <h3>{{ contact.name }}</h3>
-                                        <p>{{ contact.messages[contact.messages.length - 1].text }}</p>
-                                        <p class="last_mess_time">{{ contact.messages[contact.messages.length - 1].date }}</p>
+                                        <p>{{ contact.messages.length != 0 ? contact.messages[contact.messages.length - 1].text : "" }}</p>
+                                        <p class="last_mess_time">{{ contact.messages.length != 0 ? contact.messages[contact.messages.length - 1].date : "" }}</p>
                                         <!-- Fine testi relativi all'ultimo messaggio -->
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@
                                 <!-- Inizio dei testi riportanti nome e ultimo accesso del contatto -->
                                 <div class="flex-grow-1">
                                     <h4>{{ activeContact.name }}</h4>
-                                    <p>Ultimo accesso oggi alle {{ activeContact.messages[activeContact.messages.length - 1].date }}</p>
+                                    <p>Ultimo accesso oggi alle {{ activeContact.messages.length != 0 ? activeContact.messages[activeContact.messages.length - 1].date : ""}}</p>
                                 </div>
                                 <!-- Fine dei testi riportanti nome e ultimo accesso del contatto -->
 
@@ -147,7 +147,7 @@
 
                             <!-- Inizio container di tutti i messaggi della chat -->
                             <div class="messages_container py-4 " :class="activeContact.name ? '' : 'border-top-right-radius-6-px'">
-                                <div class="row" v-if="activeContact.messages.length > 0" v-for="(message, i) in activeContact.messages">
+                                <div class="row" v-for="(message, i) in activeContact.messages">
                                     <div class="col-8 d-flex" :class="message.status === 'sent' ? 'justify-content-end ms-auto' : 'justify-content-start me-auto'">  
                                         <div :class="message.status === 'sent' ? 'sent_message' : 'received_message'">
                                             <p>{{ message.text }}</p>
