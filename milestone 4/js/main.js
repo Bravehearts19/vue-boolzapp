@@ -210,7 +210,8 @@ window.addEventListener("DOMContentLoaded", function () {
                 return contact.name.toLowerCase().includes(this.searchText.toLowerCase().trim())
             });
             return this.filteredContacts;
-        }
+        },
+
     },
     /* created() {
         this.activeContact = this.contacts[0];
