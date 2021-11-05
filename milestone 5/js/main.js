@@ -101,6 +101,7 @@ window.addEventListener("DOMContentLoaded", function () {
             this.activeContact = chatDaAttivare;
             this.activeContact.index = i;
         },
+        
         onOpenPage() {
             this.activeContact = this.contacts[0];
             return this.activeContact;
