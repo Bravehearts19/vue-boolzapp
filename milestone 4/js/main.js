@@ -202,7 +202,7 @@ window.addEventListener("DOMContentLoaded", function () {
         addMessage(messageText, status) {
             this.activeContact.messages.push({
                 text: messageText,
-                date: '10/01/2020 15:50:00',
+                date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
                 status: status,
             });
         },
@@ -217,6 +217,7 @@ window.addEventListener("DOMContentLoaded", function () {
     created() {
         this.activeContact = this.contacts[0];
         this.activeContact.index = 0;
+        /* getFilteredContacts(); */
     },
     /* mounted() {
      setInterval(() => {
