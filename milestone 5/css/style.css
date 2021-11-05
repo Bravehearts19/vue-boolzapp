@@ -279,3 +279,9 @@ p {
 .border-top-right-radius-6-px {
     border-top-right-radius: 6px;
 }
+
+.dropdown_showed {
+    display: block;
+    right: 0;
+    bottom: 1px;
+}

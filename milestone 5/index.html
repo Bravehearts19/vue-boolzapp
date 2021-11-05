@@ -147,23 +147,24 @@
 
                             <!-- Inizio container di tutti i messaggi della chat -->
                             <div class="messages_container py-4 " :class="activeContact.name ? '' : 'border-top-right-radius-6-px'">
-                                <div class="row" v-for="message in activeContact.messages">
+                                <div class="row" v-if="activeContact.messages.length > 0" v-for="(message, i) in activeContact.messages">
                                     <div class="col-8 d-flex" :class="message.status === 'sent' ? 'justify-content-end ms-auto' : 'justify-content-start me-auto'">  
                                         <div :class="message.status === 'sent' ? 'sent_message' : 'received_message'">
                                             <p>{{ message.text }}</p>
                                             <p class="mess_time">{{ message.date }}</p>
+                                            
                                             <!-- Inizio dropdown -->
                                             <div class="dropdown">
                                                 <!-- Inizio dropdown button -->
-                                                <button type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <button type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" @click="onButtonDropdownClick()">
                                                     <i class="fas fa-chevron-down"></i>
                                                 </button>
                                                 <!-- Fine dropdown button -->
 
                                                 <!-- Inizio dropdown menu -->
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" :class="dropdownShowed ? ' dropdown_showed' : ''" @mouseleave="onDropdownMouseLeave">
                                                     <a class="dropdown-item" href="#">Message info</a>
-                                                    <a class="dropdown-item" href="#">Delete message</a>
+                                                    <a class="dropdown-item" href="#" @click="onDeleteLinkClick(i)">Delete message</a>
                                                 </div>
                                                 <!-- Fine dropdown menu -->
                                             </div>

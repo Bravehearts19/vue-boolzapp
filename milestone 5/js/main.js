@@ -95,6 +95,7 @@ window.addEventListener("DOMContentLoaded", function () {
         newTextMessage: "",
         searchText: "",
         filteredContacts: [],
+        dropdownShowed: false,
     },
     methods: {
         onChatClick(chatDaAttivare, i) {
@@ -129,7 +130,18 @@ window.addEventListener("DOMContentLoaded", function () {
             });
             return this.filteredContacts;
         },
+        onDeleteLinkClick(i) {
+            this.activeContact.messages.splice(i, 1);
+        },
+        onInfoLinkClick(i) {
 
+        },
+        onButtonDropdownClick() {
+            this.dropdownShowed = true;
+        },
+        onDropdownMouseLeave() {
+            this.dropdownShowed = false;
+        },
     },
     beforeMount() {
         this.activeContact = this.contacts[0];
