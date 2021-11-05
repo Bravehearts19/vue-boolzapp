@@ -3,7 +3,7 @@ Vue.config.devtools = true;
 /* Funzione-evento che parte alla lettura del contenuto del DOM della pagina */
 /* Viene utilizzata per racchiudere tutte le variabili non rendendole globali */
 window.addEventListener("DOMContentLoaded", function () {
-    /* const vueApp =  */new Vue({
+    new Vue({
     el: "#root",
     data: {
         contacts: [
@@ -136,10 +136,5 @@ window.addEventListener("DOMContentLoaded", function () {
         this.activeContact.index = 0;
         this.getFilteredContacts();
     },
-    /* mounted() {
-     setInterval(() => {
-
-        }, 1000)       
-    } */
 });
 });
