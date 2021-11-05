@@ -75,7 +75,7 @@ window.addEventListener("DOMContentLoaded", function () {
             },
             {
                 name: 'Luisa',
-                avatar: 'img/avatar_4.jpg',
+                avatar: 'img/avatar_6.jpg',
                 visible: true,
                 messages: [
                     {
