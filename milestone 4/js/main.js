@@ -181,8 +181,9 @@ window.addEventListener("DOMContentLoaded", function () {
         ],
     },
     methods: {
-        onChatClick(chatDaAttivare) {
+        onChatClick(chatDaAttivare, i) {
             this.activeContact = chatDaAttivare;
+            this.activeContact.index = i;
         },
         onOpenPage() {
             this.activeContact = this.contacts[0];
@@ -213,9 +214,10 @@ window.addEventListener("DOMContentLoaded", function () {
         },
 
     },
-    /* created() {
+    created() {
         this.activeContact = this.contacts[0];
-    }, */
+        this.activeContact.index = 0;
+    },
     /* mounted() {
      setInterval(() => {
 
