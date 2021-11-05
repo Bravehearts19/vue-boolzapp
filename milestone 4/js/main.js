@@ -220,6 +220,9 @@ window.addEventListener("DOMContentLoaded", function () {
             });
         }
     },
+    /* created() {
+        this.activeContact = this.contacts[0];
+    }, */
     /* mounted() {
      setInterval(() => {
 
